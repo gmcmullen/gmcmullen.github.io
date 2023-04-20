@@ -7,12 +7,14 @@ body, html {
 /* Media queries for mobile devices */
 @media screen and (max-width: 768px) {
   .header {
-    font-size: 1.75em; /* Decrease header font size */
+    font-size: 1.25em; /* Decrease header font size */
+    top: 15%;
   }
 
   .menu {
-    font-size: 1em; /* Decrease menu font size */
+    font-size: 0.7em; /* Decrease menu font size */
     padding-left: 1rem; /* Adjust menu indentation */
+    top: 30%; /* Adjust menu top position on mobile */
   }
 
   .icon-container {
