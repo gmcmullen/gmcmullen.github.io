@@ -18,9 +18,10 @@ body, html {
 }
 
 .header {
-  font-size: 2em;
+  font-size: 4em;
   color: white;
   font-family: 'Syne', sans-serif;
+  margin-top: 20%;
   margin-bottom: 1.5em;
 }
 
@@ -94,7 +95,8 @@ body, html {
 /* Media queries for mobile devices */
 @media screen and (max-width: 768px) {
   .header {
-    font-size: 1.5em; /* Adjust header font size */
+    font-size: 2em;
+    margin-top: 5%;
   }
 
   .menu {
