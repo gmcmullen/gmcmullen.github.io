@@ -4,41 +4,52 @@ body, html {
   font-family: Syne, sans-serif;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("./bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100%;
-  background-image: url("./bg.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  flex-grow: 1;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 .header {
   font-size: 4em;
   color: white;
-  font-family: 'Syne', sans-serif;
-  margin-top: 10%;
-  margin-bottom: 0.25em;
+  margin-top: 5%;
+  margin-bottom: 0.1em;
+  padding-left: 1.25rem;
 }
 
 .menu {
   color: white;
-  font-family: 'Syne', sans-serif;
-  padding-left: 4rem;
+  padding-left: 2rem;
+  flex-basis: 25%;
 }
 
-
-
-.text-section-break {
-  width: 50%;
+.linebreak {
+  width: 33%;
   height: 1px;
   background-color: white;
-  border: none; /* Remove default border */
-  margin: 1rem 0; /* Add some margin around the break */
+  border: none;
+  margin: 1.1rem 0;
+  padding-left: .25rem;
 }
 
 .menu ul {
@@ -49,64 +60,84 @@ body, html {
 .menu li {
   margin-bottom: 1rem;
   padding-left: 1rem;
-  font-size: 1.2rem;
-  color: white; /* Add color property to make the list items white */
+  font-size: 1.1rem;
+  color: white;
 }
 
 .menu a {
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
-
-.social-icons {
-  display: flex; /* Use flexbox to arrange the icons */
-  justify-content: flex-start; /* Align the icons to the left */
-  gap: 20px; /* Space between the icons */
-  margin-top: 20px; /* Add some space above the container */
-  padding-left: 2rem;
+footer {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  border-top: 1px dotted white;
+  font-weight: 300;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
+.text-box {
+  background-color: rgba(211, 211, 211, 0.2);
+  color: white;
+  padding: 0.5rem;
+  padding-top: 0.2rem;
+  max-width: 30%;
+  flex-basis: 40%;
+  font-size: 1rem;
+  font-weight: 300;
+  display: none;
+  margin-left: 1.5rem; 
+  margin-top: 1.3rem;
+  margin-bottom: 2rem;
 }
 
-
-.email-icon {
-   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.272 6.365C2 6.9 2 7.6 2 9v6c0 1.4 0 2.1.272 2.635a2.5 2.5 0 0 0 1.093 1.092C3.9 19 4.6 19 6 19h12c1.4 0 2.1 0 2.635-.273a2.5 2.5 0 0 0 1.092-1.092C22 17.1 22 16.4 22 15V9c0-1.4 0-2.1-.273-2.635a2.5 2.5 0 0 0-1.092-1.093C20.1 5 19.4 5 18 5H6c-1.4 0-2.1 0-2.635.272a2.5 2.5 0 0 0-1.093 1.093zM4.647 7h14.706a.5.5 0 0 1 .278.916l-7.075 4.732a1 1 0 0 1-1.112 0L4.369 7.916A.5.5 0 0 1 4.647 7z' fill='%23fbfcff'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+.text-box h1 {
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 400;
 }
 
-.twitter-icon {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23ffffff;stroke-miterlimit:10;stroke-width:2px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M8.5,17c-2.73-.52-4.33-1.56-5-3'%3E%3C/path%3E%3Cpath class='cls-1' d='M4.5,10c-1.15-1.92-1.7-5.38-1-6,3.1,2.5,6.12,4.09,9,4,0,0,0-5,4-5a4.38,4.38,0,0,1,3,1h3l-1,3a13.47,13.47,0,0,1-4,11c-5,5-13,4-16,0'%3E%3C/path%3E%3Cpath class='cls-1' d='M5.5,14a7.57,7.57,0,0,1-3-5'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+.text-box a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  padding-bottom: 0.1px;
+  line-height: 1.2;
 }
 
-.keybase-icon {
-  background-image: url("data:image/svg+xml,%3Csvg style='color: white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M286.17 419a18 18 0 1 0 18 18 18 18 0 0 0-18-18zm111.92-147.6c-9.5-14.62-39.37-52.45-87.26-73.71q-9.1-4.06-18.38-7.27a78.43 78.43 0 0 0-47.88-104.13c-12.41-4.1-23.33-6-32.41-5.77-.6-2-1.89-11 9.4-35L198.66 32l-5.48 7.56c-8.69 12.06-16.92 23.55-24.34 34.89a51 51 0 0 0-8.29-1.25c-41.53-2.45-39-2.33-41.06-2.33-50.61 0-50.75 52.12-50.75 45.88l-2.36 36.68c-1.61 27 19.75 50.21 47.63 51.85l8.93.54a214 214 0 0 0-46.29 35.54C14 304.66 14 374 14 429.77v33.64l23.32-29.8a148.6 148.6 0 0 0 14.56 37.56c5.78 10.13 14.87 9.45 19.64 7.33 4.21-1.87 10-6.92 3.75-20.11a178.29 178.29 0 0 1-15.76-53.13l46.82-59.83-24.66 74.11c58.23-42.4 157.38-61.76 236.25-38.59 34.2 10.05 67.45.69 84.74-23.84.72-1 1.2-2.16 1.85-3.22a156.09 156.09 0 0 1 2.8 28.43c0 23.3-3.69 52.93-14.88 81.64-2.52 6.46 1.76 14.5 8.6 15.74 7.42 1.57 15.33-3.1 18.37-11.15C429 443 434 414 434 382.32c0-38.58-13-77.46-35.91-110.92zM142.37 128.58l-15.7-.93-1.39 21.79 13.13.78a93 93 0 0 0 .32 19.57l-22.38-1.34a12.28 12.28 0 0 1-11.76-12.79L107 119c1-12.17 13.87-11.27 13.26-11.32l29.11 1.73a144.35 144.35 0 0 0-7 19.17zm148.42 172.18a10.51 10.51 0 0 1-14.35-1.39l-9.68-11.49-34.42 27a8.09 8.09 0 0 1-11.13-1.08l-15.78-18.64a7.38 7.38 0 0 1 1.34-10.34l34.57-27.18-14.14-16.74-17.09 13.45a7.75 7.75 0 0 1-10.59-1s-3.72-4.42-3.8-4.53a7.38 7.38 0 0 1 1.37-10.34L214 225.19s-18.51-22-18.6-22.14a9.56 9.56 0 0 1 1.74-13.42 10.38 10.38 0 0 1 14.3 1.37l81.09 96.32a9.58 9.58 0 0 1-1.74 13.44zM187.44 419a18 18 0 1 0 18 18 18 18 0 0 0-18-18z' fill='white'%3E%3C/path%3E%3C/svg%3E");
+.text-box li {
+  list-style: circle;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-left: -0.9rem;
 }
 
-.linkedin-icon {
-  background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' viewBox='0 0 1920 1920' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M1168 601.321v74.955c72.312-44.925 155.796-71.11 282.643-71.11 412.852 0 465.705 308.588 465.705 577.417v733.213L1438.991 1920v-701.261c0-117.718-42.162-140.06-120.12-140.06-74.114 0-120.12 23.423-120.12 140.06V1920l-483.604-4.204V601.32H1168Zm-687.52-.792v1318.918H0V600.53h480.48Zm-120.12 120.12H120.12v1078.678h240.24V720.65Zm687.52.792H835.267v1075.316l243.364 2.162v-580.18c0-226.427 150.51-260.18 240.24-260.18 109.55 0 240.24 45.165 240.24 260.18v580.18l237.117-2.162v-614.174c0-333.334-93.573-457.298-345.585-457.298-151.472 0-217.057 44.925-281.322 98.98l-16.696 14.173H1047.88V721.441ZM240.24 0c132.493 0 240.24 107.748 240.24 240.24 0 132.493-107.747 240.24-240.24 240.24C107.748 480.48 0 372.733 0 240.24 0 107.748 107.748 0 240.24 0Zm0 120.12c-66.186 0-120.12 53.934-120.12 120.12s53.934 120.12 120.12 120.12 120.12-53.934 120.12-120.12-53.934-120.12-120.12-120.12Z' fill-rule='evenodd'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+.text-box li:first-of-type {
+  margin-top: -0.5rem;
 }
 
-/* Media queries for mobile devices */
+/* Media queries */
+
+/* Show the text box on larger screens */
+@media screen and (min-width: 769px) {
+  .text-box {
+    display: block;
+  }
+}
+
+/* Mobile devices */
 @media screen and (max-width: 768px) {
   .header {
     font-size: 2em;
     margin-top: 5%;
   }
-
   .menu {
-    font-size: 1em; /* Adjust menu font size */
-    padding-left: 2rem; /* Adjust menu indentation */
-  }
-
-  .icon-container {
-    justify-content: center; /* Center icons on mobile devices */
-    padding-left: 0; /* Remove left padding for the icon container */
+    font-size: 1em;
+    padding-left: 2rem;
   }
 }
-
