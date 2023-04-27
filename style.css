@@ -66,6 +66,7 @@ body, html {
 
 .menu a {
   text-decoration: none;
+  border-bottom: 1px dotted;
   color: white;
   font-size: 1.1rem;
 }
@@ -74,13 +75,13 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   border-top: 1px dotted white;
   font-weight: 300;
 }
 
 .text-box {
-  background-color: rgba(211, 211, 211, 0.2);
+  background-color: rgba(211, 211, 211, 0.05);
   color: white;
   padding: 0.5rem;
   padding-top: 0.2rem;
@@ -91,34 +92,34 @@ footer {
   display: none;
   margin-left: 1.5rem; 
   margin-top: 1.3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.9rem;
 }
 
 .text-box h1 {
   color: white;
-  font-size: 1.05rem;
+  font-size: .85rem;
   font-weight: 400;
 }
 
 .text-box a {
   color: white;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 300;
   text-decoration: none;
   border-bottom: 1px dotted;
-  padding-bottom: 0.1px;
-  line-height: 1.2;
+  padding-bottom: 0.05px;
+  line-height: 1.5;
 }
 
 .text-box li {
   list-style: circle;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 300;
   margin-left: -0.9rem;
 }
 
 .text-box li:first-of-type {
-  margin-top: -0.5rem;
+  margin-top: -0.45rem;
 }
 
 /* Media queries */
