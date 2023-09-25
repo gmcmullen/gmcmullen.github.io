@@ -64,6 +64,14 @@ body, html {
   color: white;
 }
 
+.menu ul li.no-spam {
+  margin-top: -0.4rem;
+  font-size: 0.7rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
 .menu a {
   text-decoration: none;
   border-bottom: 1px dotted;
